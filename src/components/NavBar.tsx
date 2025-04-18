@@ -54,9 +54,9 @@ const NavBar = () => {
           </Typography>
           {/* Home Route */}
           <Button 
-            onClick={() => navigate('/fetch-take-home/home')} 
-            color={isActive('/fetch-take-home/home') ? 'secondary' : 'inherit'} 
-            variant={isActive('/fetch-take-home/home') ? 'contained' : 'text'} 
+            onClick={() => navigate('/fetch-take-home/')} 
+            color={isActive('/fetch-take-home/') ? 'secondary' : 'inherit'} 
+            variant={isActive('/fetch-take-home/') ? 'contained' : 'text'} 
             size='small'
             sx={{ mx: 2 }}
           >

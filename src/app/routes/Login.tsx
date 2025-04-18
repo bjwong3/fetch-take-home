@@ -37,7 +37,7 @@ const Login = () => {
     setLoading(true)
     try {
       await dispatch(login({ name, email })).unwrap()
-      navigate('/fetch-take-home/home')
+      navigate('/fetch-take-home/')
     } catch (e: any) {
       setError(e?.message || 'Login failed. Please try again.')
     } finally {

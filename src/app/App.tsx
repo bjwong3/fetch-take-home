@@ -58,7 +58,7 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <Routes>
           <Route element={<ProtectedLayout />}>
-            <Route path='/fetch-take-home/home' element={<Home />} />
+            <Route path='/fetch-take-home/' element={<Home />} />
           </Route>
           <Route element={<ProtectedLayout />}>
             <Route path='/fetch-take-home/favorites' element={<Favorites />} />
