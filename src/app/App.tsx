@@ -58,13 +58,13 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <Routes>
           <Route element={<ProtectedLayout />}>
-            <Route path='/fetch-take-home/' element={<Home />} />
+            <Route path='/' element={<Home />} />
           </Route>
           <Route element={<ProtectedLayout />}>
-            <Route path='/fetch-take-home/favorites' element={<Favorites />} />
+            <Route path='/favorites' element={<Favorites />} />
           </Route>
           <Route element={<DefaultLayout />}>
-            <Route path='/fetch-take-home/login' element={<Login />} />
+            <Route path='/login' element={<Login />} />
           </Route>
         </Routes>
       </ThemeProvider>

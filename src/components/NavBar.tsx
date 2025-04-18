@@ -7,6 +7,7 @@ import {
 import { useAppDispatch } from '../hooks/redux-hooks'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { logout } from '../slices/authSlice'
+import { clearFavorited } from '../slices/userSlice'
 
 // Navigation Bar
 const NavBar = () => {
@@ -18,8 +19,9 @@ const NavBar = () => {
   // Attempt logout POST request and direct to login page
   const handleLogout = async () => {
     try {
+      dispatch(clearFavorited())
       await dispatch(logout()).unwrap()
-      navigate('/fetch-take-home/login')
+      navigate('/login')
     } catch (e) {
       console.error(e)
     }
@@ -54,9 +56,9 @@ const NavBar = () => {
           </Typography>
           {/* Home Route */}
           <Button 
-            onClick={() => navigate('/fetch-take-home/')} 
-            color={isActive('/fetch-take-home/') ? 'secondary' : 'inherit'} 
-            variant={isActive('/fetch-take-home/') ? 'contained' : 'text'} 
+            onClick={() => navigate('/')} 
+            color={isActive('/') ? 'secondary' : 'inherit'} 
+            variant={isActive('/') ? 'contained' : 'text'} 
             size='small'
             sx={{ mx: 2 }}
           >
@@ -64,9 +66,9 @@ const NavBar = () => {
           </Button>
           {/* Favorites Route */}
           <Button 
-            onClick={() => navigate('/fetch-take-home/favorites')} 
-            color={isActive('/fetch-take-home/favorites') ? 'secondary' : 'inherit'} 
-            variant={isActive('/fetch-take-home/favorites') ? 'contained' : 'text'} 
+            onClick={() => navigate('/favorites')} 
+            color={isActive('/favorites') ? 'secondary' : 'inherit'} 
+            variant={isActive('/favorites') ? 'contained' : 'text'} 
             size='small'
             sx={{ mr: 2 }}
           >

@@ -29,14 +29,14 @@ axiosInstance.interceptors.response.use(
         else {
           console.error('Token refresh failed:', 'User info not found')
           localStorage.removeItem('userInfo')
-          globalRouter.navigate('/fetch-take-home/login')
+          globalRouter.navigate('/login')
         }
         
       } catch (refreshError) {
         // Handle refresh token errors by clearing stored user info and redirecting to the login page.
         console.error('Token refresh failed:', refreshError)
         localStorage.removeItem('userInfo')
-        globalRouter.navigate('/fetch-take-home/login')
+        globalRouter.navigate('/login')
         return Promise.reject(refreshError)
       }
     }

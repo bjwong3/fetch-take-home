@@ -20,10 +20,13 @@ const userSlice = createSlice({
     updateFavorited: (state, param) => {
       state.favorited = param.payload
       localStorage.setItem('favorited', JSON.stringify(state.favorited))
+    },
+    clearFavorited: (state) => {
+      state.favorited = []
     }
   }
 })
 
 const { actions, reducer } = userSlice
-export const { updateFavorited } = actions
+export const { updateFavorited, clearFavorited } = actions
 export default reducer
