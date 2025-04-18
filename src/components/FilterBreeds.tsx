@@ -46,7 +46,7 @@ const FilterBreeds: React.FC<FilterBreedsProps> = memo(({ options, selected, set
 					renderInput={(params) => (
 						<TextField 
 							{...params} 
-							label={"Breeds"}
+							label={'Breeds'}
 							placeholder='Search' 
 							variant='outlined'
 							size='small'
