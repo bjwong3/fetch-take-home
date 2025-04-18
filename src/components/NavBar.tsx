@@ -19,7 +19,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       await dispatch(logout()).unwrap()
-      navigate('/login')
+      navigate('/fetch-take-home/login')
     } catch (e) {
       console.error(e)
     }
@@ -54,9 +54,9 @@ const NavBar = () => {
           </Typography>
           {/* Home Route */}
           <Button 
-            onClick={() => navigate('/home')} 
-            color={isActive('/home') ? 'secondary' : 'inherit'} 
-            variant={isActive('/home') ? 'contained' : 'text'} 
+            onClick={() => navigate('/fetch-take-home/home')} 
+            color={isActive('/fetch-take-home/home') ? 'secondary' : 'inherit'} 
+            variant={isActive('/fetch-take-home/home') ? 'contained' : 'text'} 
             size='small'
             sx={{ mx: 2 }}
           >
@@ -64,9 +64,9 @@ const NavBar = () => {
           </Button>
           {/* Favorites Route */}
           <Button 
-            onClick={() => navigate('/favorites')} 
-            color={isActive('/favorites') ? 'secondary' : 'inherit'} 
-            variant={isActive('/favorites') ? 'contained' : 'text'} 
+            onClick={() => navigate('/fetch-take-home/favorites')} 
+            color={isActive('/fetch-take-home/favorites') ? 'secondary' : 'inherit'} 
+            variant={isActive('/fetch-take-home/favorites') ? 'contained' : 'text'} 
             size='small'
             sx={{ mr: 2 }}
           >

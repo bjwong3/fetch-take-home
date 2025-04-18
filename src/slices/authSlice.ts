@@ -25,7 +25,7 @@ export const login = createAsyncThunk('login', async (data: User) => {
 
   // Add user data to local storage
   localStorage.setItem('userInfo', JSON.stringify(userData))
-  localStorage.setItem('favorited', JSON.stringify({favorited: []}))
+  localStorage.setItem('favorited', JSON.stringify([]))
 
   return userData
 })

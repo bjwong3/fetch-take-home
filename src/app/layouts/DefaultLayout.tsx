@@ -7,7 +7,7 @@ const DefaultLayout = () => {
   const userProfileInfo = useAppSelector((state) => state.auth.userBasicInfo)
 
   if (userProfileInfo) {
-    return <Navigate replace to={'/'} />
+    return <Navigate replace to={'/fetch-take-home/home'} />
   }
 
   return (

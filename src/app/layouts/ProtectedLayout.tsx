@@ -7,7 +7,7 @@ const ProtectedLayout = () => {
   const userProfileInfo = useAppSelector((state) => state.auth.userBasicInfo)
 
   if (!userProfileInfo) {
-    return <Navigate replace to={'/login'} />
+    return <Navigate replace to={'/fetch-take-home/login'} />
   }
 
   return (
