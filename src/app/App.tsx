@@ -58,7 +58,7 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <Routes>
           <Route element={<ProtectedLayout />}>
-            <Route path='/home' element={<Home />} />
+            <Route path='/' element={<Home />} />
           </Route>
           <Route element={<ProtectedLayout />}>
             <Route path='/favorites' element={<Favorites />} />
