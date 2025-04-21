@@ -236,9 +236,9 @@ const Home = () => {
       {loading ? (
         <CircularProgress size={24} color='inherit' />
       ) : (
-        <Grid container mt={10} mb={14} mx={3} spacing={2} columns={60}>
+        <Grid container alignItems='center' justifyContent='center' mt={10} mb={14} mx={3} spacing={2} columns={60}>
           {dogs.map((dog) => (
-            <Grid size={{ xs: 60, sm: 30, md: 20, lg: 12 }} key={dog.id} sx={{ minWidth: 358 }}>
+            <Grid size={{ xs: 60, sm: 30, md: 20, lg: 12 }} key={dog.id} sx={{ minWidth: 340 }}>
               <DogCard 
                 dog={dog}
                 isFavorited={favorites.includes(dog.id)}
